@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Space - Generador de Códigos QR</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-qrcode"></i> QR Space</h1>
+            <p>Genera códigos QR de forma rápida y sencilla</p>
+        </header>
+
+        <main class="card">
+            <div class="input-section">
+                <h2><span class="number">1</span> Ingresa tu contenido</h2>
+                <div class="input-group">
+                    <input type="text" id="qr-input" placeholder="URL o texto para generar QR" 
+                           autocomplete="off" spellcheck="false">
+                    <select id="qr-type">
+                        <option value="url">URL</option>
+                        <option value="text">Texto</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="qr-section">
+                <h2><span class="number">2</span> Tu código QR</h2>
+                <div class="qr-container">
+                    <div id="qr-code"></div>
+                    <div class="qr-overlay">
+                        <i class="fas fa-qrcode"></i>
+                        <p>Ingresa contenido para generar el QR</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="options-section">
+                <h2><span class="number">3</span> Personaliza y descarga</h2>
+                <div class="color-options">
+                    <div class="color-picker">
+                        <label for="qr-color">Color del QR:</label>
+                        <input type="color" id="qr-color" value="#000000">
+                    </div>
+                    <div class="color-picker">
+                        <label for="bg-color">Color de fondo:</label>
+                        <input type="color" id="bg-color" value="#ffffff">
+                    </div>
+                </div>
+                <button id="download-btn" class="download-btn">
+                    <i class="fas fa-download"></i> Descargar QR
+                </button>
+            </div>
+        </main>
+
+        <footer>
+            <p>Creado por QR Space</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
